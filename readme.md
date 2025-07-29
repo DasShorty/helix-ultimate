@@ -1,4 +1,4 @@
-# Helix Ultimate V2.0.0
+# Helix Ultimate V2.0.0 - made for a custom Joomla! project
 
 This is a major version of **Helix Ultimate** introduces a lot of improvements.
 
