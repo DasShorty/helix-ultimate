@@ -469,15 +469,15 @@ jQuery(function ($) {
 		toggleSubmenu($item, !isOpen);
 	});
 
-	// Handle menu link click or Enter/Space key
-	$(document).on('click keydown', `${menuSelector} > a`, function (event) {
-		if (event.type === 'click' || event.key === 'Enter' || event.key === ' ') {
-			event.preventDefault();
-			const $item = $(this).closest(menuSelector);
-			const isOpen = $item.hasClass('menu-parent-open');
-			toggleSubmenu($item, !isOpen);
-		}
-	});
+	// // Handle menu link click or Enter/Space key
+	// $(document).on('click keydown', `${menuSelector} > a`, function (event) {
+	// 	if (event.type === 'click' || event.key === 'Enter' || event.key === ' ') {
+	// 		event.preventDefault();
+	// 		const $item = $(this).closest(menuSelector);
+	// 		const isOpen = $item.hasClass('menu-parent-open');
+	// 		toggleSubmenu($item, !isOpen);
+	// 	}
+	// }); -> Removed due to interference with menu structure
 
 	// Handle arrow key navigation
 	$(document).on('keydown', `${menuSelector} > a`, function (event) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.8" type="plugin" group="system" method="upgrade">
-    <name>Helix Ultimate based template installer</name>
+    <name>Helix Ultimate based template installer - made for ENO</name>
     <description>Shaper Helix Ultimate - Blank template of Helix Ultimate framework</description>
     <scriptfile>installer.script.php</scriptfile>
     <files>
