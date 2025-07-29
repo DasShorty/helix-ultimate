@@ -1,0 +1,35 @@
+Subject: [PATCH] ref(handle menu link click): if a "a" element is clicked, and it contains the information that it is another sub menu. It should yet be clickable regardless of its containing sub entries
+---
+Index: templates/shaper_helixultimate/js/main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/shaper_helixultimate/js/main.js b/templates/shaper_helixultimate/js/main.js
+--- a/templates/shaper_helixultimate/js/main.js	(revision cab93bf832ba1151d173528a2666ba5aa78583b3)
++++ b/templates/shaper_helixultimate/js/main.js	(date 1753768779910)
+@@ -469,15 +469,15 @@
+ 		toggleSubmenu($item, !isOpen);
+ 	});
+ 
+-	// Handle menu link click or Enter/Space key
+-	$(document).on('click keydown', `${menuSelector} > a`, function (event) {
+-		if (event.type === 'click' || event.key === 'Enter' || event.key === ' ') {
+-			event.preventDefault();
+-			const $item = $(this).closest(menuSelector);
+-			const isOpen = $item.hasClass('menu-parent-open');
+-			toggleSubmenu($item, !isOpen);
+-		}
+-	});
++	// // Handle menu link click or Enter/Space key
++	// $(document).on('click keydown', `${menuSelector} > a`, function (event) {
++	// 	if (event.type === 'click' || event.key === 'Enter' || event.key === ' ') {
++	// 		event.preventDefault();
++	// 		const $item = $(this).closest(menuSelector);
++	// 		const isOpen = $item.hasClass('menu-parent-open');
++	// 		toggleSubmenu($item, !isOpen);
++	// 	}
++	// }); -> Removed due to interference with menu structure
+ 
+ 	// Handle arrow key navigation
+ 	$(document).on('keydown', `${menuSelector} > a`, function (event) {
